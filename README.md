@@ -4,10 +4,10 @@
  -----------------------------------------------------------
  
  What does this application do?
- a. Lists all the exsiting posts, latest post being the first.
- b. Creates a new post by clicking create button on the top right corner of the home page.
- c. Edits the post by clicking on the post and then click the edit button on the top right corner.
- d. Full details of the post:title, description and date.
+ * Lists all the exsiting posts, latest post being the first.
+ * Creates a new post by clicking create button on the top right corner of the home page.
+ * Edits the post by clicking on the post and then click the edit button on the top right corner.
+ * Full details of the post:title, description and date.
  
  Implementation details:
  ------------------------------------------------------------
