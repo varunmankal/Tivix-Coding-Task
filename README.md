@@ -12,11 +12,11 @@
  Implementation details:
  ------------------------------------------------------------
  
-* Used Django framework to handle requests and to save the posts.                                                                              
+* Used Django framework to handle requests.                                                                              
 * Used Bootstrap to style the web pages.
 * Used converage tool for measuring code coverage.
 * Used Django forms to create a form for new post.
-* Used sqlite database.
+* Used sqlite database to store all the posts.
  
  Testing details:
  -------------------------------------------------------------
