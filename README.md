@@ -26,7 +26,7 @@ I performed blackbox testing and unit testing on this application. As a user, I 
 Code coverage:
 -------------------------------------------------------------
 
-To measure code coverage, I used converage tool which I tried for the first time and I liked it. My code achieved a coverage of ** 88% ** overall.
+To measure code coverage, I used converage tool which I tried for the first time and I liked it. My code achieved a coverage of **88%** overall.
  
  Documentation: 
  -------------------------------------------------------------
