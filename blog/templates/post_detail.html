@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	
+<nav class="navbar fixed-top navbar-expand-lg">
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+			<form action="{% url 'home' %}">
+				<input type="submit" class="btn btn-primary" value="Home" />
+			</form>
+			</li>
+			<li class="nav-item active">
+			<form action="{% url 'post_edit' pk=post.pk %}">
+				<input type="submit" class="btn btn-primary" value="Edit Post" />
+			</form>
+			</li>
+		</ul>
+
+	</div>
+</nav>
+
+<div class="parent">
+	<div class="singlepost">
+
+		{% if post %}	
+		<div class="a">
+			<h6 class="desc">{{ post.date }}</h6>
+			<h2 class="title">{{ post.title }}</h2>
+			<p class="desc">{{ post.description }} </p>
+		</div>	
+		{% else %}
+		<div class="a">
+			<h3 class="desc">No posts </h3>
+		</div>	
+		{% endif %}
+
+</div>
+</div>
+	
+
+{% endblock %}

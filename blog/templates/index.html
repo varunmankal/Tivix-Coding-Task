@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav class="navbar fixed-top navbar-expand-lg">
+<div class="navbar-header">
+    <a class="navbar-brand" href="#">Share yours ideas</a>
+</div>
+	<ul class="navbar-nav ml-auto">
+		<li class="nav-item active">
+			<form action="/create">
+				<input type="submit" class="btn btn-primary" value="Create Post" />
+			</form>
+		</li>
+    </ul>
+</nav>
+
+<div class="parent">
+	<div class="singlepost">
+		{% if posts %}
+	 
+		{% for p in posts %}
+		<div class="a">
+			<h6 class="desc">{{ p.date }}</h6>
+			<a href="{% url 'detailpost' pk=p.pk %}">
+				<h2 class="title">{{ p.title }}</h2>
+				<h4 class="desc">{{ p.description|slice:":80" }}</h4>
+			</a>
+			<hr>
+		</div>	
+		{% endfor %}	
+		
+		{% else %}
+		<div class="a">
+			<h3 class="desc">No posts </h3>
+		</div>	
+		{% endif %}
+
+	</div>
+</div>
+
+{% endblock %}
+
+
+
