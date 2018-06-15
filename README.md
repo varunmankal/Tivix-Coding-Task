@@ -12,7 +12,7 @@
  Implementation details:
  ------------------------------------------------------------
  
- Used Django framwork to handle requests and to save the posts.
+ Used Django framework to handle requests and to save the posts.                                                                              
  Used Bootstrap to style the web pages.
  Used converage tool for measuring code coverage.
  Used Django forms to create a form for new post.
