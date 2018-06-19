@@ -2,44 +2,40 @@
 
 {% block content %}
 
-<nav class="navbar fixed-top navbar-expand-lg">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 <div class="navbar-header">
     <a class="navbar-brand" href="#">Share yours ideas</a>
 </div>
 	<ul class="navbar-nav ml-auto">
 		<li class="nav-item active">
-			<form action="/create">
-				<input type="submit" class="btn btn-primary" value="Create Post" />
-			</form>
+		  <a href="/create/" class="btn btn-primary">Create Post</a>
+      <a href={% url 'signin' %} class="btn btn-primary">Logout</a>
 		</li>
-    </ul>
+  </ul>
 </nav>
 
 <div class="parent">
 	<div class="singlepost">
 		{% if posts %}
-	 
+
 		{% for p in posts %}
 		<div class="a">
-			<h6 class="desc">{{ p.date }}</h6>
+			<h6 class="desc">posted on {{ p.date }} by {{ p.user.username }}</h6>
 			<a href="{% url 'detailpost' pk=p.pk %}">
 				<h2 class="title">{{ p.title }}</h2>
 				<h4 class="desc">{{ p.description|slice:":80" }}</h4>
 			</a>
 			<hr>
-		</div>	
-		{% endfor %}	
-		
+		</div>
+		{% endfor %}
+
 		{% else %}
 		<div class="a">
 			<h3 class="desc">No posts </h3>
-		</div>	
+		</div>
 		{% endif %}
 
 	</div>
 </div>
 
 {% endblock %}
-
-
-

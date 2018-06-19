@@ -1,0 +1,13 @@
+/* A css style sheet for post_edit.html */
+
+.jumbotron
+{
+  margin-right: 100px;
+  padding-left: 100px;
+  margin-left:100px;
+}
+
+.form-control
+{
+  border: 1px solid black;
+}

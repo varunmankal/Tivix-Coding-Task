@@ -1,0 +1,29 @@
+
+<!-- A template to display sign in form -->
+
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" />
+    <div class="container">
+      <div class="jumbotron">
+        <form action="home/" method="POST" class="registerform">
+          {% csrf_token %}
+          <h2> Please login</h2>
+          <hr>
+          {% for field in form %}
+          <div class="row">
+            <div class="form-group col-sm-10">
+                {{ field }}
+            </div>
+          </div>
+          {% endfor %}
+          <label><button type="submit" class="btn btn-primary ">Sign in</label>
+        </form>
+      </div>
+  </div>
+
+{% endblock %}

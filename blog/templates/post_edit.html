@@ -1,19 +1,33 @@
+
+<!-- Template to edit the post and then to save the updaated version of it -->
 {% extends 'base.html' %}
+
+{% load staticfiles %}
 
 {% block content %}
 
-<div class="createpost">
-	 <div class="a">
+<link rel="stylesheet" type="text/css" href="{% static '/css/createpost.css' %}"
+
+<div class=" container ">
+	 <div class="jumbotron">
+
 		<h2>New post</h2>
-	
-		<form method="POST" class="post-form">
+
+		<form method="POST" action="">
 			{% csrf_token %}
-			{{ form.as_p }}
+			{% for field in form %}
+			<div class="form-group">
+				{{ field.name.label_tag }}
+				{{ field }}
+			</div>
+			{% endfor %}
+
 			<button type="submit" class="save btn btn-primary">Save</button>
+			<a href="/home/" class="btn btn-primary" >Cancel</a>
 		</form>
-	
+
 	</div>
-		
+
 </div>
 
 {% endblock %}
