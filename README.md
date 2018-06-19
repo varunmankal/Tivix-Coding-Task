@@ -4,9 +4,10 @@
  -----------------------------------------------------------
  
  What does this application do?
+ * Signing in and Signing out of the users.
  * Lists all the exsiting posts, latest post being the first.
  * Creates a new post by clicking create button on the top right corner of the home page.
- * Edits the post by clicking on the post and then click the edit button on the top right corner.
+ * User can edit the post only if the author of the post is same as logged in user.
  * Full details of the post:title, description and date.
  
  Implementation details:
@@ -26,7 +27,7 @@ I performed blackbox testing and unit testing on this application. As a user, I 
 Code coverage:
 -------------------------------------------------------------
 
-To measure code coverage, I used converage tool which I tried for the first time and I liked it. My code achieved a coverage of **88%** overall.
+To measure code coverage, I used converage tool which I tried for the first time and I liked it. My code achieved a coverage of **80%** overall.
  
  Documentation: 
  -------------------------------------------------------------
