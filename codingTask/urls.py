@@ -16,12 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from blog.views import home, newpost, detailpost, post_edit
+from blog.views import home, newpost, detailpost, post_edit, signin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-	path('home/',  home, name="home"), # home page, where it lists all the existing posts 
-	path('create/',newpost, name="newpost"), # it will take to a new page to create a post	
+	path('home/',  home, name="home"), # home page, where it lists all the existing posts
+    path('',signin,name="signin"),
+	path('create/',newpost, name="newpost"), # it will take to a new page to create a post
 	path('post/<int:pk>/',detailpost,name="detailpost"), # it displays full details of the desired post
-    path('post/<int:pk>/edit/', post_edit, name='post_edit'), # it enables to edit the post	
+    path('post/<int:pk>/edit/', post_edit, name='post_edit'), # it enables to edit the post
 ]
